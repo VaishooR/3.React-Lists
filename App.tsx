@@ -12,20 +12,31 @@ export default function App() {
   ];
   return (
     <div>
-      {planets.map((p, key) => {
-        return p.isGasPlanet ? (
-          <h3>
-            {key} - {p.name}
-          </h3>
-        ) : (
-          ''
-        );
-      })}
+      {
+        planets.map( (p, key) => 
+              {
+                return p.isGasPlanet ? ( <h3> {key} - {p.name} </h3> ) : ('');
+              }
+        )
+      }
     </div>
   );
 }
 
-// {planets.map( (p) => (p.isGasPlanet ? <h3>{p.name}</h3> : '') )}
+
+
+
+// {
+//   planets.map( (p) => (p.isGasPlanet ? <h3>{p.name}</h3> : '') )
+// }
+
+
+
+// {
+//   planets.map( (p, key) => p.isGasPlanet && <h3> {key} - {p.name} </h3> )
+// }
+
+
 
 // {planets.map((plnt) => {
 //   if (plnt.isGasPlanet == true) {
